@@ -8,8 +8,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import LoginForm from './pages/SignInForm/SignInForm'
-import SignUpForm from './pages/SignUpForm/SignUpForm'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import ForgotPassword from './pages/ForgotPassword'
 
 
 const App = () => {
@@ -19,8 +20,9 @@ const App = () => {
         <Route path="/" element={<Home/>} />
         <Route path="/product" element = {<Products/>}/>
         <Route path="/cart" element={<Cart/>}/>
-        <Route path="/register" element={<SignUpForm/>}/>
-        <Route path="/login" element={<LoginForm/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
       </Routes>
     </BrowserRouter>
   )
