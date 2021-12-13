@@ -84,7 +84,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Center>
                 <Right>
-                    <MenuItem><a href="/register" style={{color:"white"}}>Register</a></MenuItem>
+                    <MenuItem><a href="/signup" style={{color:"white"}}>Register</a></MenuItem>
                     <MenuItem><a href="/login" style={{color:"white"}}>Login</a></MenuItem>
                     <MenuItem>
                         <a href="/cart">
