@@ -5,6 +5,8 @@ import Slider from '../component/Slider'
 import Product_list from '../component/Product_list'
 import Blog from '../component/Blog'
 import Footer from '../component/Footer'
+import LoginForm from './SignInForm/SignInForm'
+
 
 const Home = () => {
     return (
