@@ -2,6 +2,13 @@ import React from 'react'
 import Footer from '../component/Footer'
 import Header from '../component/Header'
 import { Product, Sale_Product } from '../data'
+import styled from "styled-components";
+
+const PProduct = styled.div`
+display: flex;
+max-width: inherit;
+`;
+
 
 const ProductList = () => {
     return (
@@ -11,51 +18,47 @@ const ProductList = () => {
         <div className="box-container">
           <div className="left-col">
             <div className="left-col-1">
-              <h2 className="title">Product Categories</h2>
+              <h2 className="title">Danh mục sản phẩm</h2>
               <div className="box">
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Beverages</a>
+                  <a href="#">Nước uống</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Biscuits, Snacks &amp; Chocolates</a>
+                  <a href="#">Bánh kẹo &amp; Đồ ngọt các loại</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Breakfast &amp; Dairy</a>
+                  <a href="#">Ngũ cốc &amp; sản phẩm từ sữa</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Fruits &amp; Vegetables</a>
+                  <a href="#">Trái cây &amp; Rau củ</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Furnishing &amp; Home Needs</a>
+                  <a href="#">Đồ gia dụng</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Grocery &amp; Staples</a>
+                  <a href="#">Rau củ &amp; Đồ đóng hộp</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Home &amp; Kitchen</a>
+                  <a href="#">Dụng cụ nhà bếp</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Household Needs</a>
+                  <a href="#">Thịt, Cá &amp; Thực phẩm đông lạnh</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Meats, Frozen &amp; Seafood</a>
+                  <a href="#">Mì, Sốt &amp; Đồ ăn liền</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">Noodles, Sauces &amp; Instant Food</a>
-                </div>
-                <div className="check">
-                  <i className="fas fa-caret-right" />
-                  <a href="#">Personal Care</a>
+                  <a href="#">Đồ trang điểm</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
@@ -63,30 +66,30 @@ const ProductList = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2 left-col-1">
-              <h2 className="title">Product Status</h2>
+            <div className="left-col-1">
+              <h2 className="title">Tình trạng</h2>
               <div className="box">
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">In Stock</a>
+                  <a href="#">Còn hàng</a>
                 </div>
                 <div className="check">
                   <i className="fas fa-caret-right" />
-                  <a href="#">on sales</a>
+                  <a href="#">Đang giảm giá</a>
                 </div>
               </div>
             </div>
-            <div className="col-3">
-              <h2 className="title">Products</h2>
+            <div className="left-col-1">
+              <h2 className="title">Sản phẩm nổi bật</h2>
               <div className="box">
                   {Sale_Product.map((item)=>(
-                      <div className="image">
+                      <div className='image'>
                       <img src={item.image} alt="" />
                       <div className="content">
                         <h3>{item.title}</h3>
                         <p><span>{item.main_price}</span>{item.sub_price}</p>
                       </div>
-                    </div>
+                      </div>
                   ))}
               </div>
             </div>
@@ -103,11 +106,11 @@ const ProductList = () => {
               </div>
               <div className="select">
                 <select>
-                  <option>sort by popularity</option>
-                  <option>sort by average rating</option>
-                  <option selected>sort by latest</option>
-                  <option>sort by price: low to high</option>
-                  <option>sort by price: hight to low</option>
+                  <option>Phổ biến nhất</option>
+                  <option>Đánh giá cao nhất</option>
+                  <option selected>Mới nhất</option>
+                  <option>Đắt nhất</option>
+                  <option>Rẻ nhất</option>
                 </select>
               </div>
             </div>
@@ -120,9 +123,9 @@ const ProductList = () => {
                         <div className="corner-box"><span /></div>
                         <img src={item.image} alt="" />
                         <h3>{item.title}</h3>
-                        <p>in stock - <span>1</span>kg</p>
+                        <p>Còn hàng - <span>1</span>kg</p>
                         <div className="price"><span>{item.main_price}</span>{item.sub_price}</div>
-                        <button type="button" className="btn">add to cart</button>
+                        <button type="button" className="btn">Thêm</button>
                       </div>
                     ))}
                 </div>

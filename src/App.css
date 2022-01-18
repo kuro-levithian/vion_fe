@@ -187,11 +187,13 @@ section {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .box-container .left-col .box a p {
   white-space: nowrap;
   max-width: 4rem;
+  text-align: justify;
 }
 
 .box-container .left-col .box a span {
@@ -511,6 +513,7 @@ section {
   padding: 1rem;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .box-container .left-col .left-col-1 .check i {
@@ -527,6 +530,7 @@ section {
   padding: 0;
   margin: 0;
   color: #808080;
+  text-decoration: none;
 }
 
 .box-container .left-col .left-col-1 .check a:hover {
@@ -535,40 +539,41 @@ section {
   color: var(--orange);
 }
 
-.box-container .left-col .col-2,
-.box-container .left-col .col-3 {
+.box-container .left-col,
+.box-container .left-col {
   margin-top: 3rem;
 }
 
-.box-container .left-col .col-3 .image {
+.box-container .left-col .image {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.box-container .left-col .col-3 .image img {
+.box-container .left-col .image img {
   width: 7rem;
   margin-right: 1rem;
 }
 
-.box-container .left-col .col-3 .image .content h3 {
+.box-container .left-col .image .content h3 {
   font-size: 1.5rem;
   font-weight: 500;
   padding: 0.5rem 0;
   cursor: pointer;
 }
 
-.box-container .left-col .col-3 .image .content h3:hover {
+.box-container .left-col .image .content h3:hover {
   color: #000;
 }
 
-.box-container .left-col .col-3 .image .content p {
+.box-container .left-col .image .content p {
   color: var(--red);
   font-size: 1.3rem;
   font-weight: normal;
 }
 
-.box-container .left-col .col-3 .image .content p span {
+.box-container .left-col .image .content p span {
   color: #808080;
   font-size: 1.2rem;
   text-decoration: line-through;
