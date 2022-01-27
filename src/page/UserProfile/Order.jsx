@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import Order from '../page/UserProfile/Order'
-import History from '../page/UserProfile/History'
-import '../page/UserProfile/User.css';
-
+import Table from 'react-bootstrap/Table';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CardWrapper = styled.div`
   overflow: hidden;
@@ -107,7 +105,7 @@ const CardH1 = styled.h1`
 
 `;
 
-const CardH2 = styled.div`
+const CardH2 = styled.h1`
   padding: 7px 0;
   width: 100%;
   font-family: inherit;
@@ -120,7 +118,6 @@ const CardH2 = styled.div`
   color: black;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-  border: .1rem solid #ddd;
   &:hover {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
     transform: translate(0, -1px);
@@ -245,42 +242,45 @@ color: #ffa4a4
 `
 
 
-export default function OrderHistory() {
-  const [toggleState, setToggleState] = useState(1);
-
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+export default function Order() {
+ 
   return (
-<CardWrapper>
-  <CardLoginForm>
-    <CardBody>
-      <CardFieldset>
-        <CardH1>Anh Ngô Phạm Hoàng Long</CardH1>
-        <CardQuit href="/">Thoát</CardQuit>
-      </CardFieldset>
-      <CardFieldset>
-        <CardH2 className={toggleState === 1 ? "active-tabs" : ""}
-          onClick={() => toggleTab(1)}>Lịch sử mua hàng</CardH2>
-        <CardH2 className={toggleState === 2 ? "active-tabs" : ""}
-          onClick={() => toggleTab(2)}>Đơn hàng hiện tại</CardH2>
-        <CardH2 className={toggleState === 3 ? "active-tabs" : ""}
-          onClick={() => toggleTab(3)}>Thông tin cá nhân</CardH2>
-      </CardFieldset>
-      <div className={toggleState === 1 ? "content  active-content" : "content"}>
-        <History/>
-      </div>
-      <div className={toggleState === 2 ? "content  active-content" : "content"}>
-        <Order/>
-      </div>
-      <div className={toggleState === 3 ? "content  active-content" : "content"}>
-      </div>
-    
+<div>
+<Table striped bordered hover>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Món hàng</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Khoai tây</td>
+                <td>1</td>
+                <td>$18</td>
+                <td>$18</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Khoai tây</td>
+                <td>2</td>
+                <td>$18</td>
+                <td>$36</td>
+            </tr>
 
-    </CardBody>
-  </CardLoginForm> 
-</CardWrapper>
+        </tbody>
+    </Table>
+
+    <CardH5>Tiền hàng: $54</CardH5>
+    <CardH5>Phí giao hàng: $0</CardH5>
+    <CardH5>Tổng: $54</CardH5>
+    <CardButtonset>
+        <CardButton>Mua lại đơn hàng</CardButton>
+    </CardButtonset>
+</div>
   );
 }
-
-
